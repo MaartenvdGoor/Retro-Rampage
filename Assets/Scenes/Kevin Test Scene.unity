@@ -329,9 +329,9 @@ GameObject:
   - component: {fileID: 70848792}
   - component: {fileID: 70848794}
   - component: {fileID: 70848793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallNav
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70848791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.32, y: 7.8401, z: 0}
+  m_LocalPosition: {x: -0.68, y: -1.0427003, z: 0}
   m_LocalScale: {x: 3.419431, y: 7.4485297, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 129236079}
   - component: {fileID: 129236081}
   - component: {fileID: 129236080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -576,9 +576,9 @@ GameObject:
   - component: {fileID: 403364815}
   - component: {fileID: 403364817}
   - component: {fileID: 403364816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallNav (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -677,9 +677,9 @@ GameObject:
   - component: {fileID: 415242123}
   - component: {fileID: 415242125}
   - component: {fileID: 415242124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallNav (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1009,9 +1009,9 @@ GameObject:
   - component: {fileID: 699655940}
   - component: {fileID: 699655942}
   - component: {fileID: 699655941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallNav (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1110,7 +1110,7 @@ GameObject:
   - component: {fileID: 848237618}
   - component: {fileID: 848237620}
   - component: {fileID: 848237619}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1221,9 +1221,9 @@ GameObject:
   - component: {fileID: 921840954}
   - component: {fileID: 921840956}
   - component: {fileID: 921840955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallNav (6)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1322,9 +1322,9 @@ GameObject:
   - component: {fileID: 999168232}
   - component: {fileID: 999168234}
   - component: {fileID: 999168233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallNav (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c98ee3ebb61f564eb5a474a5a15414a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3712463901609501070, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
+  enemyPrefab: {fileID: 6647459029498355981, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
   enemyInterval: 5
   enemiesCanSpawn: 1
   firstPosX: -0.4
@@ -1682,7 +1682,7 @@ GameObject:
   - component: {fileID: 1142007009}
   - component: {fileID: 1142007011}
   - component: {fileID: 1142007010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1793,7 +1793,7 @@ GameObject:
   - component: {fileID: 1150766649}
   - component: {fileID: 1150766651}
   - component: {fileID: 1150766650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2077,7 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c98ee3ebb61f564eb5a474a5a15414a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3712463901609501070, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
+  enemyPrefab: {fileID: 6647459029498355981, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
   enemyInterval: 5
   enemiesCanSpawn: 0
   firstPosX: -27.5
@@ -2343,9 +2343,9 @@ GameObject:
   - component: {fileID: 1488712507}
   - component: {fileID: 1488712509}
   - component: {fileID: 1488712508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallNav (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2444,7 +2444,7 @@ GameObject:
   - component: {fileID: 1499866669}
   - component: {fileID: 1499866671}
   - component: {fileID: 1499866670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2624,7 +2624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c98ee3ebb61f564eb5a474a5a15414a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3712463901609501070, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
+  enemyPrefab: {fileID: 6647459029498355981, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
   enemyInterval: 5
   enemiesCanSpawn: 1
   firstPosX: -0.4
@@ -2803,7 +2803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c98ee3ebb61f564eb5a474a5a15414a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3712463901609501070, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
+  enemyPrefab: {fileID: 6647459029498355981, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
   enemyInterval: 5
   enemiesCanSpawn: 1
   firstPosX: -27.5
@@ -2847,7 +2847,7 @@ GameObject:
   - component: {fileID: 1959613018}
   - component: {fileID: 1959613019}
   - component: {fileID: 1959613020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2862,7 +2862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959613017}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.32, y: 8.0028, z: 0}
+  m_LocalPosition: {x: -0.68000007, y: -0.88, z: 0}
   m_LocalScale: {x: 1.5606, y: 5.6051507, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3042,7 +3042,7 @@ GameObject:
   - component: {fileID: 2008359505}
   - component: {fileID: 2008359507}
   - component: {fileID: 2008359506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}

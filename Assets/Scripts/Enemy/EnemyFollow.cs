@@ -8,6 +8,8 @@ public class EnemyFollow : MonoBehaviour
     private GameObject player;
     private NavMeshAgent agent;
 
+    public FollowRadius FollowRadius;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -18,7 +20,10 @@ public class EnemyFollow : MonoBehaviour
 
     void Update()
     {
-        SetAgentPosition();
+        if (FollowRadius.canFollowPlayer)
+        {
+            agent.SetDestination(player.transform.position);
+        }
     }
 
     void SetAgentPosition()

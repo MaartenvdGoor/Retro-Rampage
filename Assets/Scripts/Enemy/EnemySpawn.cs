@@ -23,7 +23,6 @@ public class EnemySpawn : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player Enters Trigger");
             enemiesCanSpawn = false;
         }
     }
@@ -32,7 +31,6 @@ public class EnemySpawn : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player Exits Trigger");
             enemiesCanSpawn = true;
         }
     }
@@ -40,7 +38,7 @@ public class EnemySpawn : MonoBehaviour
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
-            if (enemiesCanSpawn == true)
+            if (enemiesCanSpawn)
             {
                 GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(firstPosX, secondPosX), Random.Range(firstPosY, secondPosY), 0), Quaternion.identity);
                 StartCoroutine(spawnEnemy(interval, enemy));
