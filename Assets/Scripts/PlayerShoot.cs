@@ -7,16 +7,18 @@ public class PlayerShoot : MonoBehaviour
 {
 
     public GameObject bullet;
-    public Transform bulletTransform;
     public bool canFire;
-    public float timeBetweenFire;
     public Weapon SelectedWeapon;
+
+    public static float PistolROF = 0.3f;
+    public static float ShotgunROF = 0.5f;
+    public static float SMGROF = 0.1f;
 
 	private float timer;
 	// Start is called before the first frame update
 	void Start()
     {
-        
+        SelectedWeapon = new Weapon(0, WeaponType.SMG);
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class PlayerShoot : MonoBehaviour
         if (!canFire)
         {
             timer += Time.deltaTime;
-            if (timer > timeBetweenFire)
+            if (timer > SelectedWeapon.TimeBetweenShots)
             {
                 canFire = true;
                 timer = 0;
@@ -58,13 +60,21 @@ public class PlayerShoot : MonoBehaviour
 
     void FireShotGun()
     {
-
-    }
+		if (Input.GetMouseButtonDown(0) && canFire)
+		{
+			canFire = false;
+			Instantiate(bullet, transform.position, Quaternion.identity);
+		}
+	}
 
     void FireSMG()
     {
-
-    }
+		if ((Input.GetMouseButton(0) || Input.GetMouseButtonDown(0)) && canFire)
+		{
+			canFire = false;
+			Instantiate(bullet, transform.position, Quaternion.identity);
+		}
+	}
 }
 
 
