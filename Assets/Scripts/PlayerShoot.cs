@@ -63,7 +63,11 @@ public class PlayerShoot : MonoBehaviour
 		if (Input.GetMouseButtonDown(0) && canFire)
 		{
 			canFire = false;
-			Instantiate(bullet, transform.position, Quaternion.identity);
+
+            for (int i = 0; i < 5; i++)
+            {
+
+            }
 		}
 	}
 
@@ -73,6 +77,7 @@ public class PlayerShoot : MonoBehaviour
 		{
 			canFire = false;
 			Instantiate(bullet, transform.position, Quaternion.identity);
+            Debug.Log("Fired");
 		}
 	}
 }
