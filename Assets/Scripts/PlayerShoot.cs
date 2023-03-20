@@ -18,7 +18,7 @@ public class PlayerShoot : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        SelectedWeapon = new Weapon(0, WeaponType.SMG);
+        SelectedWeapon = new Weapon(1, WeaponType.Shotgun);
     }
 
     // Update is called once per frame
@@ -66,7 +66,8 @@ public class PlayerShoot : MonoBehaviour
 
             for (int i = 0; i < 5; i++)
             {
-
+                GameObject pellet = Instantiate(bullet,transform.position,Quaternion.identity);
+                pellet.GetComponent<BulletMovement>().spread = SelectedWeapon.Spread;
             }
 		}
 	}

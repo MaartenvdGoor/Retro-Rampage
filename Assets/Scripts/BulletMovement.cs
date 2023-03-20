@@ -10,6 +10,7 @@ public class BulletMovement : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     public int lifetime;
+    public float spread = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +20,10 @@ public class BulletMovement : MonoBehaviour
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - transform.position;
         Vector3 rotation = transform.position - mousePos;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+        //rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
+        transform.rotation = Quaternion.Euler(0, 0, rot + 90 + (Random.Range(-spread,spread) * 10));
+        rb.velocity = Vector2.right * rot * force;
 		Destroy(gameObject, lifetime);
 	}
 
