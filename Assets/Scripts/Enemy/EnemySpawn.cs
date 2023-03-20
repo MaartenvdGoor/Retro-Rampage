@@ -39,11 +39,11 @@ public class EnemySpawn : MonoBehaviour
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
-        if (enemiesCanSpawn == true)
-        {
-            yield return new WaitForSeconds(interval);
-            GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(firstPosX, secondPosX), Random.Range(firstPosY, secondPosY), 0), Quaternion.identity);
-            StartCoroutine(spawnEnemy(interval, enemy));
-        }
+        yield return new WaitForSeconds(interval);
+            if (enemiesCanSpawn == true)
+            {
+                GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(firstPosX, secondPosX), Random.Range(firstPosY, secondPosY), 0), Quaternion.identity);
+                StartCoroutine(spawnEnemy(interval, enemy));
+            }
     }
 }

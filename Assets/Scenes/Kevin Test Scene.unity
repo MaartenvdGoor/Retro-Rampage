@@ -1422,13 +1422,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1014922463}
   - component: {fileID: 1014922464}
+  - component: {fileID: 1014922465}
   m_Layer: 0
   m_Name: EnemySpawnerTopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1014922463
 Transform:
   m_ObjectHideFlags: 0
@@ -1458,10 +1459,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3712463901609501070, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
   enemyInterval: 5
+  enemiesCanSpawn: 1
   firstPosX: -0.4
   secondPosX: 26.5
   firstPosY: 0.5
   secondPosY: 15
+--- !u!61 &1014922465
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014922462}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 13.867237, y: 7.863738}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 27.888912, y: 15.712801}
+  m_EdgeRadius: 0
 --- !u!1 &1075928242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,6 +2079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3712463901609501070, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
   enemyInterval: 5
+  enemiesCanSpawn: 0
   firstPosX: -27.5
   secondPosX: -0.4
   firstPosY: 0.5
@@ -2560,13 +2589,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1577765282}
   - component: {fileID: 1577765283}
+  - component: {fileID: 1577765284}
   m_Layer: 0
   m_Name: EnemySpawnerBottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1577765282
 Transform:
   m_ObjectHideFlags: 0
@@ -2596,10 +2626,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3712463901609501070, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
   enemyInterval: 5
+  enemiesCanSpawn: 1
   firstPosX: -0.4
   secondPosX: 26.5
   firstPosY: -14.9
   secondPosY: 0.3
+--- !u!61 &1577765284
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577765281}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 13.894964, y: -7.7676706}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 27.825, y: 15.763399}
+  m_EdgeRadius: 0
 --- !u!1 &1745741174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,13 +2768,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1899587883}
   - component: {fileID: 1899587884}
+  - component: {fileID: 1899587885}
   m_Layer: 0
   m_Name: EnemySpawnerBottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1899587883
 Transform:
   m_ObjectHideFlags: 0
@@ -2747,10 +2805,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3712463901609501070, guid: cb1a35b5af05d6c44b554512c20dda4d, type: 3}
   enemyInterval: 5
+  enemiesCanSpawn: 1
   firstPosX: -27.5
   secondPosX: -0.4
   firstPosY: -14.9
   secondPosY: 0.3
+--- !u!61 &1899587885
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899587882}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -13.903047, y: -7.809023}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 27.64818, y: 15.653118}
+  m_EdgeRadius: 0
 --- !u!1 &1959613017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3137,7 +3222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089373263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.029075548, y: -0.55996656, z: 0}
+  m_LocalPosition: {x: -9.25, y: 2.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
