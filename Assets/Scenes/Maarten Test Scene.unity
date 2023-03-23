@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 1056732044}
   - component: {fileID: 1056732043}
   - component: {fileID: 1056732046}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,6 +318,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8852288882850379507, guid: a836409844cb4e046876763fbe403310, type: 3}
-  bulletTransform: {fileID: 0}
   canFire: 0
-  timeBetweenFire: 0.3

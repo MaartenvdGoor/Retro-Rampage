@@ -18,7 +18,7 @@ public class PlayerShoot : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        SelectedWeapon = new Weapon(1, WeaponType.Shotgun);
+        SelectedWeapon = new Weapon(0.5f, WeaponType.SMG);
     }
 
     // Update is called once per frame
@@ -54,8 +54,9 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canFire)
         {
             canFire = false;
-            Instantiate(bullet, transform.position,Quaternion.identity);
-        }
+			GameObject pellet = Instantiate(bullet, transform.position,Quaternion.identity);
+			pellet.GetComponent<BulletMovement>().spread = SelectedWeapon.Spread;
+		}
     }
 
     void FireShotGun()
@@ -64,7 +65,7 @@ public class PlayerShoot : MonoBehaviour
 		{
 			canFire = false;
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 18; i++)
             {
                 GameObject pellet = Instantiate(bullet,transform.position,Quaternion.identity);
                 pellet.GetComponent<BulletMovement>().spread = SelectedWeapon.Spread;
@@ -77,8 +78,9 @@ public class PlayerShoot : MonoBehaviour
 		if ((Input.GetMouseButton(0) || Input.GetMouseButtonDown(0)) && canFire)
 		{
 			canFire = false;
-			Instantiate(bullet, transform.position, Quaternion.identity);
-            Debug.Log("Fired");
+			GameObject pellet = Instantiate(bullet, transform.position, Quaternion.identity);
+			pellet.GetComponent<BulletMovement>().spread = SelectedWeapon.Spread;
+			Debug.Log("Fired");
 		}
 	}
 }
