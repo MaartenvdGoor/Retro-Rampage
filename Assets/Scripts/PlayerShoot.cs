@@ -18,7 +18,7 @@ public class PlayerShoot : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        SelectedWeapon = new Weapon(0.5f, WeaponType.SMG);
+        SelectedWeapon = new Weapon(0f, WeaponType.Pistol);
     }
 
     // Update is called once per frame
@@ -55,7 +55,8 @@ public class PlayerShoot : MonoBehaviour
         {
             canFire = false;
 			GameObject pellet = Instantiate(bullet, transform.position,Quaternion.identity);
-			pellet.GetComponent<BulletMovement>().spread = SelectedWeapon.Spread;
+			pellet.GetComponent<Bullet>().spread = SelectedWeapon.Spread;
+            pellet.GetComponent<Bullet>().isPlayerBullet = true;
 		}
     }
 
@@ -65,11 +66,12 @@ public class PlayerShoot : MonoBehaviour
 		{
 			canFire = false;
 
-            for (int i = 0; i < 18; i++)
+            for (int i = 0; i < 5; i++)
             {
                 GameObject pellet = Instantiate(bullet,transform.position,Quaternion.identity);
-                pellet.GetComponent<BulletMovement>().spread = SelectedWeapon.Spread;
-            }
+                pellet.GetComponent<Bullet>().spread = SelectedWeapon.Spread;
+				pellet.GetComponent<Bullet>().isPlayerBullet = true;
+			}
 		}
 	}
 
@@ -79,10 +81,30 @@ public class PlayerShoot : MonoBehaviour
 		{
 			canFire = false;
 			GameObject pellet = Instantiate(bullet, transform.position, Quaternion.identity);
-			pellet.GetComponent<BulletMovement>().spread = SelectedWeapon.Spread;
-			Debug.Log("Fired");
+			pellet.GetComponent<Bullet>().spread = SelectedWeapon.Spread;
+			pellet.GetComponent<Bullet>().isPlayerBullet = true;
 		}
 	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		Debug.Log(collision.gameObject.tag);
+		if (collision.gameObject.tag == "Pickup")
+		{
+			collision.gameObject.GetComponent<WeaponDrop>().player = gameObject;
+			collision.gameObject.GetComponent<WeaponDrop>().canPickUp = true;
+		}
+	}
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+
+		if (collision.gameObject.tag == "Pickup")
+		{
+			collision.gameObject.GetComponent<WeaponDrop>().player = null;
+			collision.gameObject.GetComponent<WeaponDrop>().canPickUp = false;
+		}
+	}
+
 }
 
 

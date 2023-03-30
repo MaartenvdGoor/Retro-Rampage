@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,14 @@ public class EnemyShoot : MonoBehaviour
     public GameObject bullet;
     public Transform bulletPos;
 
+    private Weapon currentWeapon;
     private float timer;
     private GameObject player;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        currentWeapon = new Weapon(0.5f, WeaponType.SMG);
     }
 
     private void Awake()
