@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
+    public FollowRadius FollowRadius;
 
     private static AudioSource audioSource;
 
@@ -33,20 +34,28 @@ public class EnemyShoot : MonoBehaviour
 
         if (distance < 17.3)
         {
-            timer += Time.deltaTime;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position, distance, LayerMask.GetMask("Wall"));
 
-            if (timer > 2)
+            if (hit.collider == null || hit.collider.CompareTag("Player"))
             {
-                timer = 0;
-                shoot();
+                timer += Time.deltaTime;
+
+                if (timer > 2)
+                {
+                    timer = 0;
+                    shoot();
+                }
             }
         }
     }
 
     void shoot()
     {
-        audioSource.Play();
-        Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        if (FollowRadius.canFollowPlayer)
+        {
+            audioSource.Play();
+            Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        }
     }
 
 }
