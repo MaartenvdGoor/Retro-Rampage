@@ -54,7 +54,8 @@ public class EnemyShoot : MonoBehaviour
         if (FollowRadius.canFollowPlayer)
         {
             audioSource.Play();
-            Instantiate(bullet, bulletPos.position, Quaternion.identity);
+            GameObject spawnedBullet = Instantiate(bullet, bulletPos.position, Quaternion.identity);
+            spawnedBullet.GetComponent<Bullet>().isPlayerBullet = false;
         }
     }
 

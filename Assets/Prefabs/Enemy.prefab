@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6647459029498355994}
   m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,9 +175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowRadius: {fileID: 8054079883354051467}
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &6647459029498355989
 MonoBehaviour:
   m_ObjectHideFlags: 0

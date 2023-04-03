@@ -46,9 +46,16 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !isPlayerBullet)
         {
-            SceneManager.LoadScene("Kevin Test Scene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if (other.gameObject.CompareTag("Enemy") && isPlayerBullet)
+        {
+            
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
 
         if (other.gameObject.CompareTag("Wall"))

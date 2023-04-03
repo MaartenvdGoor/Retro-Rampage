@@ -40,7 +40,7 @@ public class EnemySpawn : MonoBehaviour
         yield return new WaitForSeconds(interval);
             if (enemiesCanSpawn)
             {
-                GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(firstPosX, secondPosX), Random.Range(firstPosY, secondPosY), 0), Quaternion.identity);
+                GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(transform.position.x - firstPosX, transform.position.x + secondPosX), Random.Range(transform.position.x - firstPosY, transform.position.y + secondPosY), 0), Quaternion.identity);
                 StartCoroutine(spawnEnemy(interval, enemy));
             }
     }
